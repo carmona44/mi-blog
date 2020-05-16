@@ -6,18 +6,27 @@
 
 module.exports = {
     siteName: 'Daniel Carmona | Blog',
-    description: 'Bienvenido al blog de Daniel Carmona. Ciclismo, programación y muchas otras historias.',
+    siteDescription: 'Bienvenido al blog de Daniel Carmona. Ciclismo, programación y muchas otras historias.',
+
+    templates: {
+        Post: '/:title',
+        Tag: '/tag/:id'
+    },
+
     plugins: [
         { use: 'gridsome-plugin-tailwindcss' },
         {
             use: '@gridsome/source-filesystem',
             options: {
-                path: './content/blog/**/*.md',
-                typeName: 'Post'
+                path: 'content/blog/**/*.md',
+                typeName: 'Post',
+                refs: {
+                    tags: {
+                        typeName: "Tag",
+                        create: true
+                    }
+                }
             }
         }
-    ],
-    templates: {
-        Post: '/blog/:year/:month/:day/:slug'
-    }
+    ]
 }

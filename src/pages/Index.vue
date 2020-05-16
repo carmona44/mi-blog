@@ -1,15 +1,29 @@
 <template>
   <Layout>
-    <header class="header">
-      <strong>
-        <h1>{{ $static.metadata.siteName }}</h1>
-      </strong>
-    </header>
-    <section class="posts">
-      <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
-    </section>
+    <div>
+      <Profile />
+      <PostList v-for="(edge, index) in $page.allPost.edges" :post="edge.node" :key="index" />
+      <Footer />
+    </div>
   </Layout>
 </template>
+
+<script>
+import Profile from '~/components/Profile';
+import PostList from '~/components/PostList';
+import Footer from '~/components/Footer';
+
+export default {
+  components:{
+    Profile,
+    PostList,
+    Footer
+  },
+  metaInfo: {
+    title: "Inicio"
+  }
+};
+</script>
 
 <static-query>
 query {
@@ -28,23 +42,18 @@ query {
         id
         title
         timeToRead
-        description
-        date (format: "DD MM YYYY")
+        date (format: "D MMMM YYYY")
+        path
+      }
+    }
+  },
+  allTag {
+    edges {
+      node {
+        id
         path
       }
     }
   }
 }
 </page-query>
-
-<script>
-export default {
-  metaInfo: {
-    title: 'Hello, world!'
-  }
-}
-</script>
-
-<style>
-
-</style>

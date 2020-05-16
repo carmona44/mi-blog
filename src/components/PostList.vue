@@ -1,11 +1,10 @@
 <template>
-  <div class="post-list">
-    <hr class="line" />
-    <p class="date" v-html="post.date" />
-    <h1 class="title" v-html="post.title" />
-    <p class="description" v-html="post.description" />
-    <b> {{post.timeToRead}} min read </b>  &nbsp;
-    <g-link :to="post.path" class="read">Read More...</g-link>
+  <div>
+    <p v-html="post.date" />
+    <h1 v-html="post.title" />
+    <p v-html="post.description" />
+    <b> {{post.timeToRead}} min read </b>
+    <g-link :to="post.path">Read More...</g-link>
   </div>
 </template>
 
