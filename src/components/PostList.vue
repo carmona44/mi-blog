@@ -12,10 +12,10 @@
       <div class="font-bold text-xl mb-2 text-center" v-html="post.title"></div>
       <div class="text-center text-sm text-gray-600">
         <span v-html="post.date" />
-        <b> {{post.timeToRead}} min read </b>
+        <b> {{post.timeToRead}} min lectura </b>
       </div>      
       <p class="text-gray-700 text-base" v-html="post.description" />
-      <g-link :to="post.path">Read More...</g-link>
+      <g-link :to="post.path">Leer más...</g-link>
     </div>
     <div class="px-6 py-4">
       <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
