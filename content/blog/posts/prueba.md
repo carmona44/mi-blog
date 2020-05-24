@@ -3,6 +3,7 @@ path: "/blog/prueba"
 date: "2019-05-16"
 title: "How to Chec"
 tags: ["number"]
+img: ./images/prueba.png
 ---
 We can check if a variable is a number in multiple ways.
 ## isNaN

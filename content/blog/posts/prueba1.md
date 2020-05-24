@@ -3,6 +3,7 @@ path: "/blog/prueba1"
 date: "2019-05-04"
 title: "How to Check if a Variable is a Number"
 tags: ["number"]
+img: ./images/clasif_abus.png
 ---
 We can check if a variable is a number in multiple ways.
 ## isNaN

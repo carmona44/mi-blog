@@ -44,6 +44,7 @@ query {
         timeToRead
         date (format: "D MMMM YYYY")
         path
+        img
       }
     }
   },
