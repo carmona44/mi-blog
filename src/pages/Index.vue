@@ -45,14 +45,12 @@ query {
         date (format: "D MMMM YYYY")
         path
         img
-      }
-    }
-  },
-  allTag {
-    edges {
-      node {
-        id
-        path
+        description
+        tags {
+          id
+          title
+          path
+        }
       }
     }
   }

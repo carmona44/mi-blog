@@ -4,6 +4,7 @@ date: "2019-05-16"
 title: "How to Chec"
 tags: ["number"]
 img: ./images/prueba.png
+description: "We can check if a variable is a number in multiple ways."
 ---
 We can check if a variable is a number in multiple ways.
 ## isNaN

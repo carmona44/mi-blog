@@ -20,6 +20,11 @@ query Post ($path: String!) {
     content
     date (format: "D MMMM YYYY")
     timeToRead
+    tags {
+      id
+      title
+      path
+    }
   }
 }
 </page-query>

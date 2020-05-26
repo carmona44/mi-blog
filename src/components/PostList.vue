@@ -3,18 +3,18 @@
     <div class="card-style rounded overflow-hidden shadow-lg">
       <g-image v-if="post.img" class="w-full" :src="post.img" alt="Sunset in the mountains" />
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2 text-center" v-html="post.title"></div>
-        <div class="text-center text-sm text-gray-600">
+        <div class="font-bold text-xl text-center" v-html="post.title"></div>
+        <div class="text-center text-xs text-gray-600">
           <span v-html="post.date" />
           <b> {{post.timeToRead}} min lectura </b>
         </div>      
-        <p class="text-gray-700 text-base" v-html="post.description" />
+        <p class="text-gray-800 text-base pt-3 pb-3" v-html="post.description" />
         <p :to="post.path">Leer más...</p>
       </div>
       <div class="px-6 py-4">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+        <g-link class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2" v-for="tag in post.tags" :key="tag.id" :to="tag.path">
+          <span>#</span> {{ tag.title }}
+        </g-link>
       </div>
     </div>
   </g-link>

@@ -2,8 +2,9 @@
 path: "/blog/prueba3"
 date: "2019-05-04"
 title: "How to Check if a Variable is"
-tags: ["number"]
+tags: ["number", "cycling", "pepito"]
 img: ./images/prueba2.png
+description: "We can check if a variable is a number in multiple ways.We can check if a variable is a number in multiple ways. We can check if a variable is a number in multiple ways. We can check if a variable is a number in multiple ways. We can check if a variable is a number in multiple ways. We can check if a variable is a number in multiple ways."
 ---
 We can check if a variable is a number in multiple ways.
 ## isNaN
