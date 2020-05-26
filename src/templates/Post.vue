@@ -1,16 +1,32 @@
 <template>
   <Layout>
-    <br />
-    <g-link to="/" class="link">&larr; Go Back</g-link>
-    <div class="post-title">
-      <h1>{{$page.post.title}}</h1>
-      <p class="post-date">{{ $page.post.date}} | {{$page.post.timeToRead}} min read</p>
-    </div>
-    <div class="post-content">
-      <p v-html="$page.post.content" />
+    <div>
+      <g-link to="/">&larr; Go Back</g-link>
+      <h1 class="text-center">{{$page.post.title}}</h1>
+
+      <PostList :post="$page.post" />
+
+      <Profile />
+
+      <Footer />
     </div>
   </Layout>
 </template>
+
+<script>
+
+import Profile from '~/components/Profile';
+import Footer from '~/components/Footer';
+import PostList from '~/components/PostList';
+
+export default {
+  components: {
+    Profile,
+    Footer,
+    PostList
+  }
+}
+</script>
 
 <page-query>
 query Post ($path: String!) {
@@ -20,6 +36,7 @@ query Post ($path: String!) {
     content
     date (format: "D MMMM YYYY")
     timeToRead
+    img
     tags {
       id
       title
