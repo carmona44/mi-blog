@@ -1,10 +1,16 @@
 <template>
   <Layout>
-    <div>
+    <div class="post-page-style">
       <g-link to="/">&larr; Go Back</g-link>
-      <h1 class="text-center">{{$page.post.title}}</h1>
+      <div class="py-4">
+        <h1 class="text-center">{{$page.post.title}}</h1>      
+        <div class="text-center text-xs text-gray-600">
+          <span v-html="$page.post.date" />
+          <b> {{$page.post.timeToRead}} min lectura </b>
+        </div> 
+      </div>
 
-      <PostList :post="$page.post" />
+      <PostCard :post="$page.post" />
 
       <Profile />
 
@@ -17,13 +23,13 @@
 
 import Profile from '~/components/Profile';
 import Footer from '~/components/Footer';
-import PostList from '~/components/PostList';
+import PostCard from '~/components/PostCard';
 
 export default {
   components: {
     Profile,
     Footer,
-    PostList
+    PostCard
   }
 }
 </script>
@@ -45,3 +51,9 @@ query Post ($path: String!) {
   }
 }
 </page-query>
+
+<style scoped>
+.post-page-style {
+  max-width: 100%;
+}
+</style>

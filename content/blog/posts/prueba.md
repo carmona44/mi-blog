@@ -7,7 +7,7 @@ img: ./images/prueba.png
 description: "We can check if a variable is a number in multiple ways."
 ---
 We can check if a variable is a number in multiple ways.
-## isNaN
+# isNaN
 We can check by calling `isNaN` with the variable as the argument. It also detects if a string’s content is a number. For example:
 ```
 isNaN(1) // false
