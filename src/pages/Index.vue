@@ -42,7 +42,7 @@ query {
         id
         title
         timeToRead
-        date (format: "D MMMM YYYY")
+        date (format: "D MMMM YYYY", locale: "es")
         path
         img
         description
