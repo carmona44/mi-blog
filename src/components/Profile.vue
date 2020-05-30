@@ -2,7 +2,7 @@
     <div class="container mx-auto flex justify-center">
         <div class="px-4 py-5 text-center">
             <div class="mb-4">
-                <img class="w-24 mx-auto rounded-full object-cover object-center" src="https://i1.pngguru.com/preview/137/834/449/cartoon-cartoon-character-avatar-drawing-film-ecommerce-facial-expression-png-clipart.jpg" alt="Avatar Upload" />
+                <img class="w-24 h-24 mx-auto rounded-full object-cover object-center" src="../assets/images/yo.jpg" alt="Avatar" />
             </div>
             <div>
                 <p class="text-gray-900 leading-none">Daniel Carmona | Blog</p>
