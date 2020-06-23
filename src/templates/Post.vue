@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="post-page-style">
-      <g-link to="/">&larr; Go Back</g-link>
+      <g-link to="/">&larr; Volver</g-link>
       <div class="py-4">
         <h1 class="text-center">{{$page.post.title}}</h1>      
         <div class="text-center text-xs text-gray-600">

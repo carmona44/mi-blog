@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="tag-page-style">
-      <g-link to="/" class="back-link-style">&larr; Go Back</g-link>
+      <g-link to="/" class="back-link-style">&larr; Volver</g-link>
       <div class="py-4 px-6">
         <h1 class="text-center mb-2"># {{$page.tag.title}}</h1>      
         <div>
